@@ -50,62 +50,6 @@ const data = {
       name: "Shopy",
     },
   ],
-  featuredItems: [
-    {
-      short: "galaxyUltra",
-      featuredItemsId: 1,
-      name: "Galaxy S23 Ultra",
-      priceEnable: 856.0,
-      priceDisable: 898.8,
-      location: "Yangon",
-      discount: 5,
-    },
-    {
-      short: "colourfulGraphicTeesForKids",
-      featuredItemsId: 2,
-      name: "Colourful Graphic Tees for Kids",
-      priceEnable: 30.0,
-      priceDisable: null,
-      location: "Mandalay",
-      discount: null,
-    },
-    {
-      short: "waffleShirt",
-      featuredItemsId: 3,
-      name: "Waffle Shirt",
-      priceEnable: 277.0,
-      priceDisable: 307.78,
-      location: "Yangon",
-      discount: 10,
-    },
-    {
-      short: "acerAspire",
-      featuredItemsId: 4,
-      name: "Acer Aspire 5",
-      priceEnable: 345.0,
-      priceDisable: null,
-      location: "London",
-      discount: null,
-    },
-    {
-      short: "fordRanger",
-      featuredItemsId: 5,
-      name: "Ford Ranger",
-      priceEnable: 43525.0,
-      priceDisable: null,
-      location: "Yangon",
-      discount: null,
-    },
-    {
-      short: "luxuryCondoLivingAtTheSky",
-      featuredItemsId: 6,
-      name: "Luxury Condo living at the sky",
-      priceEnable: 250000.0,
-      priceDisable: null,
-      location: "Singapore",
-      discount: null,
-    },
-  ],
 };
 const LatestVendor = () => {
   const settings = {
@@ -114,8 +58,34 @@ const LatestVendor = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow className="bg-black text-black" />,
+    nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -148,9 +118,20 @@ const LatestVendor = () => {
         <div id="caroulesVendor" className="grid grid-cols-1">
           <div className="w-full m-auto ">
             <div className="mt-20">
-              <Slider {...settings}>
-                {data.latestVendors.map((latestVendor) => (
-                 
+              <div className="grid grid-cols-2 md:grid-cols-4 justify-between gap-11">
+                <div className=" text-3xl font-semibold px-5 pb-11">
+                  Latest Vendor
+                </div>
+                <div className="pt-2 col-span-1 col-start-2 md:col-start-4  ">
+                  <button className="border-2 hover:bg-gray-200 w-28 h-10 ">
+                   
+                    View all
+                  </button>
+                </div>
+              </div>
+              <div className="slider-container">
+                <Slider {...settings}>
+                  {data.latestVendors.map((latestVendor) => (
                     <div
                       key={latestVendor.latestVendorId}
                       className="bg-white h-[400px] mx-1 border-2 text-black rounded-xl"
@@ -174,45 +155,7 @@ const LatestVendor = () => {
                         </button>
                       </div>
                     </div>
-                 
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>
-        <div id="featuredItems" className="grid grid-cols-1 mt-20">
-          <div className="grid grid-cols-6 bg-gray-300 gap-2">
-            <div className="col-span-2">
-              <div className="px-12 py-10">
-                <p className="text-2xl font-semibold mb-2">Featured Items </p>
-                <p className="text-xl ">
-                  Find something special among our featured items.
-                </p>
-                <button
-                  className="bg-black text-white p-2 w-18 mt-4
-                        "
-                >
-                  View All
-                </button>
-              </div>
-            </div>
-            <div className="col-span-4 ">
-              <div className="w-full ">
-                <Slider className="my-10" {...settings}>
-                    {
-                        data.featuredItems.map((featuredItem)=>(
-                           <>
-                            <div key={featuredItem.featuredItemsId} className="h-56 mx-1 ">
-                                <div>
-                                    <img src={`/src/assets/images/${featuredItem.short}.png`} alt="" className="object-cover h-48" />
-                                </div>
-                                <div className="bg-white font-semibold text-lg">${featuredItem.priceEnable}</div>
-
-
-                            </div>
-                           </>
-                        ))
-                    }
+                  ))}
                 </Slider>
               </div>
             </div>

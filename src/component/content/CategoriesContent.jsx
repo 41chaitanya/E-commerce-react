@@ -44,18 +44,18 @@ const data = {
 const CategoriesContent = () => {
   return (
     <>
-
-    
       <div id="homeCategory" className="grid grid-cols-12 gap-2">
         <div className=" col-span-8 col-start-3">
           <div>+</div>
-          
+
           <div className=" grid xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
-            {
-                
-                data.categories.map((category)=><Card key={category.categoryId} details={category.name} short={category.short}/>)
-                
-            }
+            {data.categories.map((category) => (
+              <Card
+                key={category.categoryId}
+                details={category.name}
+                short={category.short}
+              />
+            ))}
           </div>
         </div>
       </div>
