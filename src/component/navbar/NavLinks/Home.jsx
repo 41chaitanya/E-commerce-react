@@ -1,19 +1,20 @@
 import React from "react";
-import SearchProductDiv from "../../searchYourProduct/SearchProductDiv";
-import CategoriesContent from "../../content/CategoriesContent";
-import HowItWork from "../../content/HowItWork";
-import LatestVendor from "../../content/LatestVendor";
-import FeaturedItems from "../../content/FeaturedItems";
+import SearchProductDiv from "../../content/landingPageContent/SearchProductDiv";
+import CategoriesContent from "../../content/landingPageContent/CategoriesContent";
+import HowItWork from "../../content/landingPageContent/HowItWork";
+import LatestVendor from "../../content/landingPageContent/LatestVendor";
+import FeaturedItems from "../../content/landingPageContent/FeaturedItems";
+import Footer from "../../content/landingPageContent/Footer";
 
 const Home = () => {
   return (
     <>
       <SearchProductDiv />
-      <CategoriesContent/>
-      <HowItWork/>
-      <LatestVendor/>
-      <FeaturedItems/>
-
+      <CategoriesContent />
+      <HowItWork />
+      <LatestVendor />
+      <FeaturedItems />
+      <Footer />
     </>
   );
 };
