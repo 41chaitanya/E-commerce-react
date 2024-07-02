@@ -20,8 +20,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />}>
-          <Route path="SmartphonesCategory" element={<SmartphonesCategory />} />
+        <Route path="categories" element={<Categories />}/>
+        <Route path="SmartphonesCategory" element={<SmartphonesCategory />} />
           <Route path="ShoesCategory" element={<ShoesCategory />} />
           <Route path="LaptopCategory" element={<LaptopCategory />} />
           <Route path="RealEstateCategory" element={<RealEstateCategory />} />
@@ -31,7 +31,6 @@ function App() {
           />
           <Route path="ClothesCategory" element={<ClothesCategory />} />
           <Route path="CarsCategory" element={<CarsCategory />} />
-        </Route>
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="*" element={<NoRoutePage />} />

@@ -48,12 +48,7 @@ const data = {
     },
   ],
 };
-const clicked = () => {
-  console.log("clicked!!!!!!!!!");
-  data.categories.forEach((element) => {
-    console.log(element.routesName);
-  });
-};
+
 const CategoriesContent = () => {
   const categoryNested = useNavigate();
   return (
@@ -63,7 +58,7 @@ const CategoriesContent = () => {
           <div className=" grid xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
             {data.categories.map((category) => (
               <div
-                onClick={()=>categoryNested(`./${category.routesName}`)}
+                onClick={()=>categoryNested(`/${category.routesName}`)}
                 id="card"
                 className="rounded-xl border-4 mb-5 mx-2 mt-8 w-60 h-64 hover:cursor-pointer"
               >
