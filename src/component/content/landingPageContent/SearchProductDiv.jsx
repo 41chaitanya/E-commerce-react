@@ -1,5 +1,5 @@
 import React from "react";
-import manPointer from "/src/assets/man-pointer.jpg";
+import manPointer from "/public/man-pointer.jpg";
 
 const SearchProductDiv = () => {
   return (

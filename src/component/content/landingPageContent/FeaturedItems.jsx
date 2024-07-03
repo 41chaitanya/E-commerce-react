@@ -153,7 +153,7 @@ const FeaturedItems = () => {
                           >
                             <div>
                               <img
-                                src={`/src/assets/images/${featuredItem.short}.png`}
+                                src={`/public/images/${featuredItem.short}.png`}
                                 alt=""
                                 className="scale-90 hover:scale-100 transition duration-500 object-cover  h-48"
                               />

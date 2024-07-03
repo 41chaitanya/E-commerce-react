@@ -11,7 +11,7 @@ const CategoryCard = ({name,index}) => {
       <div className="bg-gray-200">
         <img
           className=" scale-90 hover:scale-100 transition duration-500 object-cover  h-48 "
-          src={`/src/assets/images/noPageFound.webp`}
+          src={`/public/images/noPageFound.webp`}
           alt=""
         />
       </div>

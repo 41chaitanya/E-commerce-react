@@ -65,7 +65,7 @@ const CategoriesContent = () => {
                 <div className="bg-gray-200">
                   <img
                     className=" scale-90 hover:scale-100 transition duration-500 object-cover  h-48 "
-                    src={`/src/assets/images/${category.short}.png`}
+                    src={`/public/images/${category.short}.png`}
                     alt=""
                   />
                 </div>

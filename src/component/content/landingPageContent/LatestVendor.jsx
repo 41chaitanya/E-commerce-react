@@ -138,7 +138,7 @@ const LatestVendor = () => {
                     >
                       <div className="h-56 rounded-t-xl flex justify-center items-center">
                         <img
-                          src={`/src/assets/images/${latestVendor.short}.png`}
+                          src={`/public/images/${latestVendor.short}.png`}
                           alt={latestVendor.short}
                           className="rounded-full h-44 w-44 "
                         />
