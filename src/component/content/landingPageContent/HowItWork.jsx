@@ -39,7 +39,7 @@ const HowItWork = () => {
               <div className="px-24">
                 <img
                   className=" scale-90 hover:scale-100 transition duration-500 object-none object-center  h-48 "
-                  src={`/public/images/${service.short}.png`}
+                  src={`/images/${service.short}.png`}
                   alt=""
                 />
               </div>
